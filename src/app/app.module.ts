@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PerfilsUsuariComponent } from './perfils-usuari/perfils-usuari.component';
+import { RegistreUsuariComponent } from './perfils-usuari/registre-usuari/registre-usuari.component';
+import { PaginaUsuariComponent } from './perfils-usuari/pagina-usuari/pagina-usuari.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+ 
+    
+    RegistreUsuariComponent,PerfilsUsuariComponent
+   
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [RegistreUsuariComponent,PerfilsUsuariComponent]
 })
 export class AppModule { }
