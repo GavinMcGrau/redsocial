@@ -1,42 +1,57 @@
 <div class="login-box">
+
+<!--   <table>
+    <tr *ngFor="let item of usuario">
+      <td>
+              {{item.nombre}}
+    </td>
+      </tr>
+  </table>
+ -->
+
+
+<!--   (ngSubmit)="creacionUsuario()" novalidate
+ -->  
+
+
+ <div class="contrasenya error">Las Contrasenyas no coinciden</div>
     <h2>Registro</h2>
-    <form>
-      <div class="user-box">
-        <input type="text" name="nombre" required="">
-        <label>Nombre</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="apellidos" required="">
-        <label>Apellidos</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="contrasenya" required="">
-        <label>Contraseña</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="" required="">
-        <label>Repite la contraseña</label>
-      </div>
-      <div class="user-box">
-        <input type="number" name="edad" required="">
-        <label>Edad</label>
-      </div>
-      <div class="user-box">
-        <input type="email" name="correo" required="">
-        <label>Correo</label>
-      </div>
-      <div class="user-box big">
-        <input type="text" name="descripcion" required="">
-        <label>Descripcion</label>
-      </div>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
+    <form (ngSubmit)="creacionUsuario(nombre,apellido,edad,foto,correo,descripcion,contrasenya)"  #myForm="ngForm" >
+        <div class="user-box">
+            <input type="text" [(ngModel)]="nombre" name="nombre" required="">
+            <label>Nombre</label>
+        </div>
+        <div class="user-box">
+            <input  type="text" [(ngModel)]="apellido" name="apellidos" required="">
+            <label>Apellidos</label>
+        </div>
+        <div class="user-box">
+            <input type="password" [(ngModel)]="contrasenya" name="contrasenya" required="">
+            <label>Contraseña</label>
+        </div>
+        <div class="user-box">
+            <input type="password" [(ngModel)]="contrasenya2"  name="contrasenya2" required="">
+            <label>Repite la contraseña</label>
+        </div>
+        <div class="user-box">
+            <input type="number" [(ngModel)]="edad" name="edad" required="">
+            <label>Edad</label>
+        </div>
+        <div class="user-box">
+            <input type="email" [(ngModel)]="correo" name="correo" required="">
+            <label>Correo</label>
+        </div>
+        <div class="user-box big">
+            <input type="text"  [(ngModel)]= "descripcion" name="descripcion" required="">
+            <label>Descripcion</label>
+        </div>
+        <a (click)="creacionUsuario(nombre,apellido,edad,foto,correo,descripcion,contrasenya);myForm.resetForm({})" >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Submit
+        </a>
     </form>
-  </div>
+</div>
 <!-- Obtenido de: 
-  https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda -->
+  https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda  (click)=creacionUsuario(nombre)-->
