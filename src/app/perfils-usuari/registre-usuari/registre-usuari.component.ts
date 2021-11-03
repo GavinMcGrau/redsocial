@@ -12,7 +12,7 @@ import { NgModule } from '@angular/core';
   templateUrl: './registre-usuari.component.html',
   styleUrls: [ './registre-usuari.component.css' ]
 } )
-export class RegistreUsuariComponent implements OnInit
+export class RegistreUsuariComponent implements OnInit  
 {
 
   nombre:string="";
@@ -42,7 +42,14 @@ export class RegistreUsuariComponent implements OnInit
 
     this.usuario.push(nuevoUsuario);
     
-  }else{
+    } else
+    {
+      var element = document.getElementById( 'error' );
+      element!.style.display = "block";
+
+     setTimeout(function(){
+     element!.style.display = "none";
+},1500);
     
   }
   }
