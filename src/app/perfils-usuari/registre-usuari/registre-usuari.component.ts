@@ -1,10 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Usuario } from '../interfaces/interfaces';
-import { FormsModule } from '@angular/forms';
+import { Form, FormsModule } from '@angular/forms';
 import { PaginaUsuariComponent } from '../pagina-usuari/pagina-usuari.component';
 import { PerfilsUsuariComponent } from '../perfils-usuari.component';
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import Swal from 'sweetalert2';
+
+
+@NgModule( {
+  //=> Basic usage (forRoot can also take options, see the wiki)
+  imports: [ SweetAlert2Module.forRoot() ],
+} )
+export class AppModule
+{
+}
 
 
 @Component( {
@@ -15,14 +26,14 @@ import { NgModule } from '@angular/core';
 export class RegistreUsuariComponent implements OnInit  
 {
 
-  nombre:string="";
-  apellido:string="";
-  edad:number=0;
-  foto:string="";
-  correo:string="";
-  descripcion:string="";
-  contrasenya:string="";
-  contrasenya2:string="";
+  nombre: string = "";
+  apellido: string = "";
+  edad: any = null;
+  foto: string = "";
+  correo: string = "";
+  descripcion: string = "";
+  contrasenya: string = "";
+  contrasenya2: string = "";
 
   @Input() usuario!: Usuario[];
 
@@ -34,31 +45,45 @@ export class RegistreUsuariComponent implements OnInit
 
 
 
-  creacionUsuario ( nombre: string, apellidos: string, edad: number,foto:string, correo: string, descripcion: string, contrasenya: string )
+  creacionUsuario ( nombre: string, apellidos: string, edad: number, foto: string, correo: string, descripcion: string, contrasenya: string )
   {
 
-    if(contrasenya===this.contrasenya2){
-   let nuevoUsuario :Usuario = {nombre,apellidos,edad,foto,correo,descripcion,contrasenya};
+    if ( contrasenya === this.contrasenya2 && contrasenya !== "" )
+    {
+      let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya };
 
-    this.usuario.push(nuevoUsuario);
-    
+      this.usuario.push( nuevoUsuario );
+
+
+
+      Swal.fire( {
+        title: 'Registrado',
+        text: 'Ya puedes entrar en BreakEnds',
+        icon: 'success',
+        confirmButtonText: 'Entrar'
+      } )
+      this.clearForm();
+
     } else
     {
-      var element = document.getElementById( 'error' );
-      element!.style.display = "block";
-
-     setTimeout(function(){
-     element!.style.display = "none";
-},1500);
-    
-  }
+      this.pola();
+    }
   }
 
-  pola(){
-    return "cacs";
+  pola ()
+  {
+    Swal.fire( {
+      title: 'Error!',
+      text: 'Las contraseñas no coinciden',
+      icon: 'error',
+      confirmButtonText: 'Volver'
+    } )
   }
 
-
+  clearForm ()
+  {
+    ( <HTMLFormElement> document.getElementById( "formRegistre" ) ).reset();
+  }
 
 
 

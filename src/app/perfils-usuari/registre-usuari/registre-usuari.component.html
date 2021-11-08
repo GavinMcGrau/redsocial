@@ -11,7 +11,7 @@
     <!--   (ngSubmit)="creacionUsuario()" novalidate
  -->
 
-    <div class="contrasenya error" id="error">Las Contrasenyas no coinciden</div>
+  
     <h2>Registro</h2>
     <form (ngSubmit)="
       creacionUsuario(
@@ -23,7 +23,7 @@
         descripcion,
         contrasenya
       )
-    " #myForm="ngForm">
+    " #myForm="ngForm" id="formRegistre" >
         <div class="user-box">
             <input type="text" [(ngModel)]="nombre" name="nombre" required="" />
             <label>Nombre</label>
@@ -41,7 +41,7 @@
             <label>Repite la contraseña</label>
         </div>
         <div class="user-box">
-            <input type="number" [(ngModel)]="edad" name="edad" required="" value=" " />
+            <input type="number" [(ngModel)]="edad" name="edad" placeholder="2"   value="2" required="" />
             <label>Edad</label>
         </div>
         <div class="user-box">
@@ -49,11 +49,13 @@
             <label>Correo</label>
         </div>
         <div class="user-box big">
-            <input type="text" [(ngModel)]="descripcion" name="descripcion" required="" />
+            <input  type="text" [(ngModel)]="descripcion" name="descripcion" required="" />
             <label>Descripcion</label>
         </div>
+        <input type="submit" style="display:none">
         <a (click)="
         creacionUsuario(
+                 
           nombre,
           apellido,
           edad,
@@ -62,12 +64,12 @@
           descripcion,
           contrasenya
         );
-        myForm.resetForm({})
+       
       ">
             <span></span>
             <span></span>
             <span></span>
-            <span></span> Submit
+            <span ></span> Submit
         </a>
     </form>
 </div>

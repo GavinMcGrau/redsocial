@@ -7,6 +7,7 @@ import { PerfilsUsuariComponent } from './perfils-usuari/perfils-usuari.componen
 import { RegistreUsuariComponent } from './perfils-usuari/registre-usuari/registre-usuari.component';
 import { PaginaUsuariComponent } from './perfils-usuari/pagina-usuari/pagina-usuari.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule( {
   declarations: [
