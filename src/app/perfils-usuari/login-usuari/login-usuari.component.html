@@ -1,0 +1,33 @@
+<div class="login-box">
+    <!--   <table>
+    <tr *ngFor="let item of usuario">
+      <td>
+              {{item.nombre}}
+    </td>
+      </tr>
+  </table>
+ -->
+
+    <!--   (ngSubmit)="creacionUsuario()" novalidate
+ -->
+
+    <h2>Registro</h2>
+    <form (ngSubmit)="loginUsuario(correo, contrasenya)" #myForm="ngForm" id="formRegistre">
+        <div class="user-box">
+            <input type="email" [(ngModel)]="correo" name="correos" required="" />
+            <label>Correo</label>
+        </div>
+        <div class="user-box">
+            <input type="password" [(ngModel)]="contrasenya" name="contrasenya" required="" />
+            <label>Contraseña</label>
+        </div>
+        <input type="submit" style="display: none" />
+        <a (click)="loginUsuario(correo, contrasenya)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Submit
+        </a>
+        <div routerLink="registre">Registrarse</div>
+    </form>
+</div>
