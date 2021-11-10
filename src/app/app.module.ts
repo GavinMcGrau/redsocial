@@ -8,12 +8,14 @@ import { RegistreUsuariComponent } from './perfils-usuari/registre-usuari/regist
 import { PaginaUsuariComponent } from './perfils-usuari/pagina-usuari/pagina-usuari.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { LoginUsuariComponent } from './perfils-usuari/login-usuari/login-usuari.component';
+import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagina-principal.component';
 
 @NgModule( {
   declarations: [
 
 
-    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent
+    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent
 
 
   ],
@@ -24,6 +26,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
   ],
   providers: [],
-  bootstrap: [ PerfilsUsuariComponent ]
+  bootstrap: [ PaginaPrincipalComponent ]
 } )
 export class AppModule { }

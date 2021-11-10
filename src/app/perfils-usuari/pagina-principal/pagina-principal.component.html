@@ -1,0 +1,31 @@
+<div class="derechaFormulario" id="derechaFromulario"></div>
+<div class="background"></div>
+<div class="imagenPrincipal" id="imagenPrincipal">
+    <h1 class="titulo">BreakEnds</h1>
+</div>
+
+<div class="contenedorSing" id="contenedorSing">
+    <app-registre-usuari class="registreComponent" [style.display]="verNoverRegistro"></app-registre-usuari>
+    <app-login-usuari class="loginComponent" [style.display]="verNoverLogin"></app-login-usuari>
+    <div class="loginBoton" id="login"></div>
+    <div class="singupBoton" id="singup"></div>
+
+    <a class="boton botonLogin" href="#" [style.display]="verNoverBoton" (click)="displayYes()"><span></span>
+    <span></span>
+    <span></span>
+    <span></span> Entrar
+  </a>
+
+    <a class="boton botonRegistre" [style.display]="verNoverBoton" (click)="displayYess()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> Registrarse
+    </a>
+    <a class boton>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+</div>
