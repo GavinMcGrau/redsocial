@@ -1,0 +1,183 @@
+.titulo {
+    text-shadow: 1px 1px #fff;
+    position: absolute;
+    color: #8AA9B8;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-shadow: tomato;
+    font-size: 10vw;
+    height: 20vh;
+    top: 46%;
+    margin-top: -10vh;
+    left: 10%;
+    text-shadow: 0 0 0px rgba(0, 178, 255, 1), 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1), 0 0 20px rgb(32, 121, 153), 0 0 50px rgba(38, 104, 127, 1), 0 0 50px rgba(38, 104, 127, 1), 0 0 60px rgba(38, 104, 127, 1), 0 0 70px rgba(31, 128, 163, 0.733);
+    -webkit-box-reflect: below -10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.308)));
+}
+
+.titulo::selection {
+    background: rgb(212, 181, 3);
+    color: rgb(199, 207, 207);
+    text-shadow: 1px 1px #fff;
+}
+
+.botonLogin {
+    left: 20vw;
+    top: 50%;
+}
+
+.botonRegistre {
+    left: 5vw;
+    top: 30%;
+    margin-left: auto;
+}
+
+.imagenPrincipal {
+    z-index: 2;
+    width: 40vw;
+    height: 40vh;
+    left: -4vw;
+    top: 50%;
+    margin-top: -20vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.contenedorSing {
+    width: 50vw;
+    height: 101vh;
+    background-image: linear-gradient(to right, rgba(167, 189, 184, 0), rgba(0, 68, 255, 0.384));
+    left: 50%;
+    top: -1%;
+    position: absolute;
+}
+
+.background {
+    width: 101vw;
+    height: 101vh;
+    margin-left: -1%;
+    margin-top: -1%;
+    background-image: linear-gradient(to right, rgba(10, 149, 214, 0.74), rgba(0, 174, 255, 0.747));
+    position: absolute;
+    z-index: -1;
+}
+
+
+/*  */
+
+
+/*  */
+
+.boton {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+a:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
