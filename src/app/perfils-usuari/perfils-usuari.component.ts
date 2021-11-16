@@ -28,5 +28,4 @@ export class PerfilsUsuariComponent
 
 
   ];
-  @Output() valueResponse: EventEmitter<Usuario> = new EventEmitter();
 }

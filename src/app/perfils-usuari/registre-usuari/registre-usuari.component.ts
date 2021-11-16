@@ -35,11 +35,16 @@ export class RegistreUsuariComponent implements OnInit
   contrasenya: string = "";
   contrasenya2: string = "";
 
-  @Input() usuario!: Usuario[];
+  @Input() usuario: Usuario[]= [];
 
   constructor ()
   {
-
+    console.log("sass")
+    for ( let item of this.usuario )
+    {
+      console.log( item );
+      
+}
 
   }
 
