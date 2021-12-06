@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { PerfilsUsuariComponent } from './perfils-usuari/perfils-usuari.component';
 import { LoginUsuariComponent } from './perfils-usuari/login-usuari/login-usuari.component';
 import { RegistreUsuariComponent } from './perfils-usuari/registre-usuari/registre-usuari.component';
+import { Usuario } from './perfils-usuari/interfaces/interfaces';
 
 const routes: Routes = [
+
 
   {
     path: 'login',
@@ -22,3 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
