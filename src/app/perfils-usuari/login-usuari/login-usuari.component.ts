@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import Swal from 'sweetalert2';
 import { Usuario } from '../interfaces/interfaces';
 import { PerfilsUsuariComponent } from '../perfils-usuari.component';
+import { UsuariosService } from 'src/app/usuarios.service';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -11,7 +13,7 @@ import { PerfilsUsuariComponent } from '../perfils-usuari.component';
 })
 export class LoginUsuariComponent  {
 
-
+ usuario: Usuario[] = [];
   nombre: string = "";
   apellido: string = "";
   edad: any = null;
@@ -25,13 +27,15 @@ export class LoginUsuariComponent  {
 
   
   
-  constructor ()
+  constructor (private UsuariosService:UsuariosService)
   {
     let usuario: Usuario[];
   }
   
-  @Input() usuario: Usuario[] = [];
-
+ ngOnInit ( ): void
+  {
+    this.usuario = this.UsuariosService.getUsuarios();
+  } 
   
  
   
@@ -40,7 +44,7 @@ export class LoginUsuariComponent  {
   {
     Swal.fire( {
       title: 'Error!',
-      text: 'Las contraseñas no coinciden',
+      text: 'Credenciales incorrectas',
       icon: 'error',
       confirmButtonText: 'Volver'
     } )
@@ -50,7 +54,8 @@ export class LoginUsuariComponent  {
 
 
   loginUsuario ( correo: string, contrasenya: string )
-{
+  {
+    window.location.href = 'WWW.google.com';
 
     for ( let i = 0; i = this.usuario.length; i++ )
     {
@@ -62,10 +67,7 @@ export class LoginUsuariComponent  {
         this.pola();
       }
 
-      if ( this.next = true )
-      {
-        
-      }
+  
     }
   
   }

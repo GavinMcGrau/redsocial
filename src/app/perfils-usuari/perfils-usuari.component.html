@@ -1,5 +1,6 @@
-<p>perfils-usuari works!</p>
-
-<app-registre-usuari [usuario]="usuario"></app-registre-usuari>
-
-<app-login-usuari [usuario]="usuario"> </app-login-usuari>
+<div *ngIf="showHidde == 2">
+    <app-registre-usuari></app-registre-usuari>
+</div>
+<div *ngIf="showHidde == 1">
+    <app-login-usuari> </app-login-usuari>
+</div>

@@ -4,10 +4,13 @@ import { Form, FormsModule } from '@angular/forms';
 import { PaginaUsuariComponent } from '../pagina-usuari/pagina-usuari.component';
 import { PerfilsUsuariComponent } from '../perfils-usuari.component';
 import { NgForm } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';  
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import Swal from 'sweetalert2';
+import { UsuariosService } from 'src/app/usuarios.service';
+import { RouterModule } from '@angular/router';
 
+  
 
 @NgModule( {
   //=> Basic usage (forRoot can also take options, see the wiki)
@@ -26,6 +29,7 @@ export class AppModule
 export class RegistreUsuariComponent implements OnInit  
 {
 
+  usuario: Usuario[] = [];
   nombre: string = "";
   apellido: string = "";
   edad: any = null;
@@ -35,9 +39,8 @@ export class RegistreUsuariComponent implements OnInit
   contrasenya: string = "";
   contrasenya2: string = "";
 
-  @Input() usuario: Usuario[]= [];
 
-  constructor ()
+  constructor (private UsuariosService:UsuariosService)
   {
     console.log("sass")
     for ( let item of this.usuario )
@@ -47,6 +50,10 @@ export class RegistreUsuariComponent implements OnInit
 }
 
   }
+  ngOnInit ( ): void
+  {
+    this.usuario = this.UsuariosService.getUsuarios();
+  } 
 
 
 
@@ -91,9 +98,5 @@ export class RegistreUsuariComponent implements OnInit
   }
 
 
-
-  ngOnInit (): void
-  {
-  }
 
 }

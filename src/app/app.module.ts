@@ -10,12 +10,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { LoginUsuariComponent } from './perfils-usuari/login-usuari/login-usuari.component';
 import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagina-principal.component';
+import { UserPageComponent } from './userPage/user-page/user-page.component';
 
 @NgModule( {
   declarations: [
 
 
-    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent
+    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent
 
 
   ],
@@ -26,6 +27,6 @@ import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagi
 
   ],
   providers: [],
-  bootstrap: [ PaginaPrincipalComponent ]
+  bootstrap: [ UserPageComponent ]
 } )
 export class AppModule { }

@@ -4,20 +4,26 @@
     <h1 class="titulo">BreakEnds</h1>
 </div>
 
+<div>
+    <li *ngFor="let item of usuario">
+        <a>{{ item.nombre }}</a>
+    </li>
+</div>
+
 <div class="contenedorSing" id="contenedorSing">
     <!--  <app-registre-usuari class="registreComponent" [style.display]="verNoverRegistro"></app-registre-usuari>
     <app-login-usuari class="loginComponent" [style.display]="verNoverLogin"></app-login-usuari> -->
-    <app-perfils-usuari></app-perfils-usuari>
-    <div class="loginBoton" id="login"></div>
-    <div class="singupBoton" id="singup"></div>
+    <app-perfils-usuari [showHidde]="showHidde"></app-perfils-usuari>
+    <!-- <div class="loginBoton" id="login" (click)="showHiddeF('login')"></div>
+    <div class="singupBoton" id="singup" (click)="showHiddeF('singup')"></div> -->
 
-    <a class="boton botonLogin" href="#" [style.display]="verNoverBoton" (click)="displayYes()"><span></span>
+    <a class="boton botonLogin" href="#" [style.display]="verNoverBoton" (click)="displayYes()" routerLink="login"><span></span>
     <span></span>
     <span></span>
     <span></span> Entrar
   </a>
 
-    <a class="boton botonRegistre" [style.display]="verNoverBoton" (click)="displayYess()">
+    <a class="boton botonRegistre" [style.display]="verNoverBoton" (click)="displayYess()" routerLink="registre">
         <span></span>
         <span></span>
         <span></span>
@@ -29,4 +35,8 @@
         <span></span>
         <span></span>
     </a>
+</div>
+
+<div class="routeSing">
+    <router-outlet></router-outlet>
 </div>

@@ -1,12 +1,11 @@
 <div class="login-box">
-    <table>
-        <h1>dsf</h1>
+    <!-- <table>
         <tr *ngFor="let item of usuario">
             <td>
                 {{ item.nombre }}
             </td>
         </tr>
-    </table>
+    </table> -->
 
     <!--   (ngSubmit)="creacionUsuario()" novalidate
  -->
@@ -69,6 +68,9 @@
             <span></span> Submit
         </a>
     </form>
+
+    <a routerLink="login"> Entrar</a>
+    <router-outlet></router-outlet>
 </div>
 <!-- Obtenido de: 
   https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda  (click)=creacionUsuario(nombre)-->
