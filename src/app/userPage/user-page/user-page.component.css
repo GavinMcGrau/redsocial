@@ -1,0 +1,187 @@
+    .header {
+        width: 35em;
+        height: 25em;
+        left: 50%;
+        margin-left: -17.5em;
+        border-radius: 30%;
+        margin-top: -10em;
+        background-color: rgba(0, 167, 167, 0.637);
+        position: relative;
+        z-index: 5;
+        box-shadow: 0em 0em 3px 2px rgb(0, 255, 255);
+        /*  animation-name: flash;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite; */
+    }
+    /*    @keyframes flash {
+        0% {
+            box-shadow: 0em 0em 8px 2px #0ff;
+        }
+        50% {
+            box-shadow: 0em 0em 4.5px 2px #0ff;
+        }
+        100% {
+            box-shadow: 0em 0em 3px 2px #0ff;
+        }
+    } */
+    
+    .botonLateral {
+        position: static;
+        /* border-radius: 50%; */
+        border-radius: 2%;
+        /*      background-image: url("src/images/icons8-menú-512.png"); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        /*   height: 5em;
+        width: 5em; */
+        height: 50vh;
+        margin-top: -15em;
+        width: 20vh;
+        top: 50%;
+        margin-top: -2.5em;
+        position: absolute;
+        box-shadow: 0em 0em 3px 2px rgb(64, 65, 52);
+        transition-duration: 1.5s;
+    }
+    
+    .boton {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        opacity: 1;
+        position: absolute;
+        background-color: rgba(86, 114, 114, 0.596);
+        text-align: center;
+        align-items: center;
+        width: 90%;
+        height: 2em;
+    }
+    
+    .boton:hover {
+        box-shadow: 0em 0em 3px 2px rgb(19, 139, 155);
+    }
+    
+    .amigos {
+        top: 25%;
+    }
+    
+    .personas {
+        top: 35%;
+    }
+    
+    .ajustes {
+        top: 45%;
+    }
+    
+    .editar {
+        top: 55%;
+    }
+    
+    .botonLateral:hover {
+        height: 50vh;
+        margin-top: -15em;
+        width: 20vh;
+        border-radius: 2%;
+        box-shadow: none;
+        background-image: none;
+    }
+    
+    .botonLateral:hover>.boton {
+        opacity: 1;
+    }
+    
+    .imagenUser {
+        width: 10em;
+        height: 10em;
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 12%;
+        background-image: url("src/images/unr_random_160817_0304_2mvqp69.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20%;
+        top: 30%;
+        left: 50%;
+        margin-left: -5em;
+    }
+    
+    .nombreUser {
+        position: absolute;
+        width: 15em;
+        margin-top: 20%;
+        top: 60%;
+        align-items: center;
+        text-align: center;
+        left: 50%;
+        margin-left: -7.5em;
+        word-wrap: break-word;
+        font-size: 2em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 4px;
+    }
+    
+    .bodyUser {
+        width: 62vw;
+        height: 75vh;
+        background-color: rgba(224, 235, 65, 0.151);
+        margin-left: 19%;
+        border-top-right-radius: 40%;
+        border-top-left-radius: 40%;
+    }
+    
+    .tituloDescripcion {
+        height: 3em;
+        width: 8em;
+        left: 50%;
+        border-top-right-radius: 40%;
+        border-top-left-radius: 40%;
+        margin-left: -4em;
+        top: 2%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.226);
+        z-index: 3;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .descripcion {
+        height: 22em;
+        width: 19em;
+        bottom: 20%;
+        right: 25%;
+        position: absolute;
+        border-radius: 30%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration-style: none;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .inputDescripcion {
+        z-index: 0;
+        position: absolute;
+        border-radius: 5%;
+        resize: none;
+        background-color: rgba(131, 148, 163, 0.548);
+    }
+    
+    .barra {
+        width: 14em;
+        height: 100%;
+        position: absolute;
+        background-color: blueviolet;
+    }
+    
+    .leftBody {
+        top: 0%;
+        left: 10%;
+    }
+    
+    .dretaBody {
+        left: 80%;
+        top: 0%;
+    }

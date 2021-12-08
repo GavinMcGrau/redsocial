@@ -4,13 +4,13 @@ import { Form, FormsModule } from '@angular/forms';
 import { PaginaUsuariComponent } from '../pagina-usuari/pagina-usuari.component';
 import { PerfilsUsuariComponent } from '../perfils-usuari.component';
 import { NgForm } from '@angular/forms';
-import { NgModule } from '@angular/core';  
+import { NgModule } from '@angular/core';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import Swal from 'sweetalert2';
 import { UsuariosService } from 'src/app/usuarios.service';
 import { RouterModule } from '@angular/router';
 
-  
+
 
 @NgModule( {
   //=> Basic usage (forRoot can also take options, see the wiki)
@@ -40,20 +40,20 @@ export class RegistreUsuariComponent implements OnInit
   contrasenya2: string = "";
 
 
-  constructor (private UsuariosService:UsuariosService)
+  constructor ( private UsuariosService: UsuariosService )
   {
-    console.log("sass")
+    console.log( "sass" )
     for ( let item of this.usuario )
     {
       console.log( item );
-      
-}
+
+    }
 
   }
-  ngOnInit ( ): void
+  ngOnInit (): void
   {
     this.usuario = this.UsuariosService.getUsuarios();
-  } 
+  }
 
 
 

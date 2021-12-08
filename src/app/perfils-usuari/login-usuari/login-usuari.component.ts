@@ -6,14 +6,15 @@ import { UsuariosService } from 'src/app/usuarios.service';
 import { RouterModule } from '@angular/router';
 
 
-@Component({
+@Component( {
   selector: 'app-login-usuari',
   templateUrl: './login-usuari.component.html',
-  styleUrls: ['./login-usuari.component.css']
-})
-export class LoginUsuariComponent  {
+  styleUrls: [ './login-usuari.component.css' ]
+} )
+export class LoginUsuariComponent
+{
 
- usuario: Usuario[] = [];
+  usuario: Usuario[] = [];
   nombre: string = "";
   apellido: string = "";
   edad: any = null;
@@ -25,22 +26,22 @@ export class LoginUsuariComponent  {
   next: boolean = false;
 
 
-  
-  
-  constructor (private UsuariosService:UsuariosService)
+
+
+  constructor ( private UsuariosService: UsuariosService )
   {
     let usuario: Usuario[];
   }
-  
- ngOnInit ( ): void
+
+  ngOnInit (): void
   {
     this.usuario = this.UsuariosService.getUsuarios();
-  } 
-  
- 
-  
+  }
 
-    pola ()
+
+
+
+  pola ()
   {
     Swal.fire( {
       title: 'Error!',
@@ -48,8 +49,8 @@ export class LoginUsuariComponent  {
       icon: 'error',
       confirmButtonText: 'Volver'
     } )
-  
-      
+
+
   }
 
 
@@ -67,9 +68,9 @@ export class LoginUsuariComponent  {
         this.pola();
       }
 
-  
+
     }
-  
+
   }
 
 

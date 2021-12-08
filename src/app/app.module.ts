@@ -27,6 +27,6 @@ import { UserPageComponent } from './userPage/user-page/user-page.component';
 
   ],
   providers: [],
-  bootstrap: [ UserPageComponent ]
+  bootstrap: [ PaginaPrincipalComponent ]
 } )
 export class AppModule { }
