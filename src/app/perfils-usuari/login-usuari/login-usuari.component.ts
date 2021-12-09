@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import { Usuario } from '../interfaces/interfaces';
 import { PerfilsUsuariComponent } from '../perfils-usuari.component';
 import { UsuariosService } from 'src/app/usuarios.service';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 
 @Component( {
@@ -28,14 +28,16 @@ export class LoginUsuariComponent
 
 
 
-  constructor ( private UsuariosService: UsuariosService )
+  constructor ( private router: Router, private route: ActivatedRoute, private UsuariosService: UsuariosService )
   {
-    let usuario: Usuario[];
+    let usuario: Usuario[] = [];
+
   }
 
   ngOnInit (): void
   {
     this.usuario = this.UsuariosService.getUsuarios();
+
   }
 
 
@@ -56,13 +58,21 @@ export class LoginUsuariComponent
 
   loginUsuario ( correo: string, contrasenya: string )
   {
-    window.location.href = 'WWW.google.com';
 
-    for ( let i = 0; i = this.usuario.length; i++ )
+
+
+    for ( let i = 0; i < this.usuario.length; i++ )
     {
+
+
+
+      console.log( this.usuario[ i ] );
+      console.log( contrasenya );
       if ( this.usuario[ i ].correo == correo && this.usuario[ i ].contrasenya == contrasenya )
       {
+
         this.next = true;
+        this.router.navigate( [ "/userPage" ], { relativeTo: this.route } );
       } else
       {
         this.pola();

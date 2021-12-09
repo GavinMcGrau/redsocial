@@ -5,10 +5,14 @@ import { LoginUsuariComponent } from './perfils-usuari/login-usuari/login-usuari
 import { RegistreUsuariComponent } from './perfils-usuari/registre-usuari/registre-usuari.component';
 import { Usuario } from './perfils-usuari/interfaces/interfaces';
 import { UserPageComponent } from './userPage/user-page/user-page.component';
+import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagina-principal.component';
 
 const routes: Routes = [
 
-
+  {
+    path: '#',
+    component: PaginaPrincipalComponent
+  },
   {
     path: 'login',
     component: LoginUsuariComponent
