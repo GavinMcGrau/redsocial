@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 @NgModule( {
   //=> Basic usage (forRoot can also take options, see the wiki)
   imports: [ SweetAlert2Module.forRoot() ],
@@ -59,8 +60,41 @@ export class RegistreUsuariComponent implements OnInit
 
   creacionUsuario ( nombre: string, apellidos: string, edad: number, foto: string, correo: string, descripcion: string, contrasenya: string )
   {
+    if( (!correo.includes(".")) || (!correo.includes("@")) || correo=="" ){
 
-    if ( contrasenya === this.contrasenya2 && contrasenya !== "" )
+      Swal.fire( {
+        title: 'Correo incorrecto',
+        text: 'Introduce un correo valido',
+        icon: 'error',
+        confirmButtonText: 'volver'
+      } )
+      
+
+    }else if(nombre==""){
+      Swal.fire( {
+        title: 'Nombre incorrecto',
+        text: 'Introduce un nombre valido',
+        icon: 'error',
+        confirmButtonText: 'volver'
+      } )
+      
+    }else if(apellidos==""){
+      Swal.fire( {
+        title: 'Apellidos incorrecto',
+        text: 'Introduce un apellido valido',
+        icon: 'error',
+        confirmButtonText: 'volver'
+      } )
+    }
+    else if(descripcion=="" || descripcion.length<4){
+      Swal.fire( {
+        title: 'Nombre incorrecto',
+        text: 'Introduce un nombre valido',
+        icon: 'error',
+        confirmButtonText: 'volver'
+      } )
+    }
+    else if ( contrasenya === this.contrasenya2 && contrasenya !== "" )
     {
       let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya };
 

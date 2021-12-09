@@ -13,19 +13,26 @@ import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagi
 import { UserPageComponent } from './userPage/user-page/user-page.component';
 import { RouterLink } from '@angular/router';
 import { RoutingPageComponent } from './routing-page/routing-page.component';
+import { UserOptionsComponent } from './user-options/user-options.component';
+
+import { AjustesComponent } from './user-options/ajustes/ajustes.component';
+import { PersonasComponent } from './user-options/personas/personas.component';
+import { SidebarComponent } from './userPage/sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule( {
   declarations: [
 
 
-    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent, RoutingPageComponent
+    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent, RoutingPageComponent, UserOptionsComponent,  AjustesComponent, PersonasComponent, SidebarComponent
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

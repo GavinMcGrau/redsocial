@@ -1,3 +1,5 @@
+
+
 .titulo {
     text-shadow: 1px 1px #fff;
     position: absolute;
@@ -11,7 +13,7 @@
     margin-top: -10vh;
     left: 10%;
     text-shadow: 0 0 0px rgba(0, 178, 255, 1), 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1), 0 0 20px rgb(32, 121, 153), 0 0 50px rgba(38, 104, 127, 1), 0 0 50px rgba(38, 104, 127, 1), 0 0 60px rgba(38, 104, 127, 1), 0 0 70px rgba(31, 128, 163, 0.733);
-    -webkit-box-reflect: below -10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.308)));
+    -webkit-box-reflect: below 20px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.308)));
 }
 
 .titulo::selection {

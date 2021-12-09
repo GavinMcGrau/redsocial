@@ -1,3 +1,8 @@
+    
+    
+    
+    
+    
     .header {
         width: 35em;
         height: 25em;
@@ -24,6 +29,16 @@
             box-shadow: 0em 0em 3px 2px #0ff;
         }
     } */
+
+
+    .barraLateral{
+        height: 105vh;
+        width: 12vw;
+        position:absolute;
+        left: -1%;
+        top: -1%;
+        background-color: rgba(11, 133, 155, 0.603);
+    }
     
     .botonLateral {
         position: static;
@@ -42,6 +57,8 @@
         position: absolute;
         box-shadow: 0em 0em 3px 2px rgb(64, 65, 52);
         transition-duration: 1.5s;
+        left: 15%;
+        position: absolute;
     }
     
     .boton {
@@ -55,14 +72,14 @@
         align-items: center;
         width: 90%;
         height: 2em;
+        box-shadow: 0em 0em 3px 2px rgb(19, 139, 155);
+       
     }
     
-    .boton:hover {
-        box-shadow: 0em 0em 3px 2px rgb(19, 139, 155);
-    }
+   
     
     .amigos {
-        top: 25%;
+        top: 20%;
     }
     
     .personas {
@@ -70,12 +87,10 @@
     }
     
     .ajustes {
-        top: 45%;
+        top: 50%;
     }
     
-    .editar {
-        top: 55%;
-    }
+    
     
     .botonLateral:hover {
         height: 50vh;
@@ -90,84 +105,7 @@
         opacity: 1;
     }
     
-    .imagenUser {
-        width: 10em;
-        height: 10em;
-        position: absolute;
-        margin-top: 10%;
-        margin-left: 12%;
-        background-image: url("src/images/unr_random_160817_0304_2mvqp69.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 20%;
-        top: 30%;
-        left: 50%;
-        margin-left: -5em;
-    }
     
-    .nombreUser {
-        position: absolute;
-        width: 15em;
-        margin-top: 20%;
-        top: 60%;
-        align-items: center;
-        text-align: center;
-        left: 50%;
-        margin-left: -7.5em;
-        word-wrap: break-word;
-        font-size: 2em;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        letter-spacing: 4px;
-    }
-    
-    .bodyUser {
-        width: 62vw;
-        height: 75vh;
-        background-color: rgba(224, 235, 65, 0.151);
-        margin-left: 19%;
-        border-top-right-radius: 40%;
-        border-top-left-radius: 40%;
-    }
-    
-    .tituloDescripcion {
-        height: 3em;
-        width: 8em;
-        left: 50%;
-        border-top-right-radius: 40%;
-        border-top-left-radius: 40%;
-        margin-left: -4em;
-        top: 2%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.226);
-        z-index: 3;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .descripcion {
-        height: 22em;
-        width: 19em;
-        bottom: 20%;
-        right: 25%;
-        position: absolute;
-        border-radius: 30%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        text-decoration-style: none;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .inputDescripcion {
-        z-index: 0;
-        position: absolute;
-        border-radius: 5%;
-        resize: none;
-        background-color: rgba(131, 148, 163, 0.548);
-    }
     
     .barra {
         width: 14em;
