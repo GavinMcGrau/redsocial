@@ -28,6 +28,7 @@ export class LoginUsuariComponent
 
 
 
+
   constructor ( private router: Router, private route: ActivatedRoute, private UsuariosService: UsuariosService )
   {
     let usuario: Usuario[] = [];
@@ -63,22 +64,18 @@ export class LoginUsuariComponent
 
     for ( let i = 0; i < this.usuario.length; i++ )
     {
-
-
-
-      console.log( this.usuario[ i ] );
-      console.log( contrasenya );
       if ( this.usuario[ i ].correo == correo && this.usuario[ i ].contrasenya == contrasenya )
       {
 
         this.next = true;
         this.router.navigate( [ "/userPage" ], { relativeTo: this.route } );
-      } else
-      {
-        this.pola();
       }
 
 
+    }
+
+    if(this.next==false){
+      this.pola();
     }
 
   }

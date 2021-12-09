@@ -13,7 +13,10 @@ body {
     background: rgba(0, 204, 255, 0.719);
     color: #334e50;
 }
-
+.loginLink{
+    color: white;
+   
+}
 .error {
     height: 3em;
     width: 15em;

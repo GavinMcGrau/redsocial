@@ -11,12 +11,14 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { LoginUsuariComponent } from './perfils-usuari/login-usuari/login-usuari.component';
 import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagina-principal.component';
 import { UserPageComponent } from './userPage/user-page/user-page.component';
+import { RouterLink } from '@angular/router';
+import { RoutingPageComponent } from './routing-page/routing-page.component';
 
 @NgModule( {
   declarations: [
 
 
-    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent
+    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent, RoutingPageComponent
 
 
   ],
@@ -27,6 +29,6 @@ import { UserPageComponent } from './userPage/user-page/user-page.component';
 
   ],
   providers: [],
-  bootstrap: [ PaginaPrincipalComponent ]
+  bootstrap: [ RoutingPageComponent ]
 } )
 export class AppModule { }
