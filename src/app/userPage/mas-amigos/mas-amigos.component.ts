@@ -66,7 +66,16 @@ export class MasAmigosComponent implements OnInit
 
   addAmigo ( id: number )
   {
-
+    for ( let i = 0; i < this.usuariosNoAmigos.length; i++ )
+    {
+      
+      if ( this.usuariosNoAmigos[ i ].id === id )
+      {
+        this.usuariosNoAmigos.splice( i, 1 );
+        this.currentUser.amigos.push(id);        
+      }
+      
+    }
 
   }
 
