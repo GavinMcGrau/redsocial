@@ -1,1 +1,17 @@
-<p>mas-amigos works!</p>
+<app-sidebar></app-sidebar>
+
+<h1 class="friendsTittle">AMIGOS</h1>
+
+<div id="" class="mongo">
+
+    <div class="friendZone" *ngFor="let item of usuariosNoAmigos">
+
+        <div class="imagenPerfil" style="background-image: url('{{item.foto}}');">
+            <h2 class="nombreAmigos">{{item.nombre}} {{item.apellidos}} </h2>
+            <div class="dropAmigo" (click)="addAmigo(item.id)"></div>
+
+        </div>
+
+
+    </div>
+</div>

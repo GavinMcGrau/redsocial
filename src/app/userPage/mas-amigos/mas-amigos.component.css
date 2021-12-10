@@ -1,0 +1,93 @@
+.friendsTittle {
+    text-align: center;
+    font-size: 10vh;
+    top: 6%;
+    left: 2.5%;
+    position: relative;
+    font-weight: 800;
+}
+
+.mongo {
+    position: absolute;
+    overflow: auto;
+    height: 63vh;
+    width: 79vw;
+    left: 16%;
+    top: 26vh;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 10px;
+}
+
+.mongo::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.mongo::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.mongo::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #26BCF7;
+}
+
+.friendZone {
+    border: 4px solid #2c92cb;
+    width: 20vw;
+    height: 30vh;
+    border-radius: 0.5em;
+}
+
+.friendZone:hover {
+    -webkit-box-shadow: inset 0 0 15px rgb(203 175 26 / 37%);
+}
+
+.imagenPerfil {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    margin-left: -2.5vw;
+    position: relative;
+    top: 10%;
+}
+
+.nombreAmigos {
+    top: 130%;
+    position: relative;
+    left: 50%;
+    margin-left: -6vw;
+    width: 16vw;
+    font-weight: 600;
+}
+
+.dropAmigo {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-image: url("https://i.ibb.co/m6v09C2/cancel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 190%;
+    left: 150%;
+    position: absolute;
+}
+
+.sendAmigo {
+    width: 3vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-image: url("https://i.ibb.co/xCPHj9f/send-plane-fill.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 200%;
+    left: -120%;
+    position: absolute;
+}

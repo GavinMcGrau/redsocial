@@ -9,6 +9,7 @@ import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagi
 import { AmigosComponent } from './user-options/amigos/amigos.component';
 import { MasAmigosComponent } from './userPage/mas-amigos/mas-amigos.component';
 import { ConfigUsuarioComponent } from './userPage/config-usuario/config-usuario.component';
+import { FriendsComponent } from './userPage/friends/friends.component';
 
 const routes: Routes = [
 
@@ -31,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: 'amigos',
-    component: AmigosComponent
+    component: FriendsComponent
   },
   {
     path: 'masAmigos',
