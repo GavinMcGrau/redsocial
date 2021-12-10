@@ -8,4 +8,7 @@ export interface Usuario
     descripcion: string,
     contrasenya: string
     rol: boolean;
+    id: number;
+    amigos: number[];
+
 }

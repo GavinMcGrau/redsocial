@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from 'src/app/usuarios.service';
 import { CurrentUserService } from 'src/app/current-user.service';
 import { Usuario } from 'src/app/perfils-usuari/interfaces/interfaces';
-import { UsuariosService } from 'src/app/usuarios.service';
 
 @Component( {
-  selector: 'app-user-page',
-  templateUrl: './user-page.component.html',
-  styleUrls: [ './user-page.component.css' ]
+  selector: 'app-friends',
+  templateUrl: './friends.component.html',
+  styleUrls: [ './friends.component.css' ]
 } )
-export class UserPageComponent implements OnInit
+export class FriendsComponent implements OnInit
 {
+
   usuarios: Usuario[] = [];
   currentUserFriends: Usuario[] = [];
   currentUser: Usuario = { nombre: 'Mohlotov', apellidos: 'Sacarias Sacarosa', edad: 73, foto: 'https://yt3.ggpht.com/ytc/AKedOLQmuX7Nmw8pyhrSMmNDba_Hj-xQ2l0euXv9Siztnw=s900-c-k-c0x00ffffff-no-rj', correo: 'sacarina@lolopo.com', descripcion: 'Me gusta el cafe', contrasenya: 'cafe', rol: false, id: 0, amigos: [ 2, 3 ] };
@@ -24,10 +25,7 @@ export class UserPageComponent implements OnInit
   id: number = 0;
   amigos: number[] = [];
 
-  constructor ( private CurrentUserService: CurrentUserService, private UsuariosService: UsuariosService )
-  {
-
-  }
+  constructor ( private CurrentUserService: CurrentUserService, private UsuariosService: UsuariosService ) { }
 
   ngOnInit (): void
   {
@@ -43,26 +41,6 @@ export class UserPageComponent implements OnInit
     this.id = this.currentUser.id;
     this.amigos = this.currentUser.amigos;
 
-    console.log( this.currentUser );
-
-    if ( this.admin == false )
-    {
-
-    }
-
-    for ( let i = 0; i < this.usuarios.length; i++ )
-    {
-      for ( let a = 0; a < this.currentUser.amigos.length; a++ )
-      {
-        if ( this.usuarios[ i ].id == this.currentUser.amigos[ a ] )
-        {
-          this.currentUserFriends.push( this.usuarios[ i ] );
-        }
-      }
-    }
-
-
   }
-
 
 }

@@ -101,7 +101,7 @@ export class RegistreUsuariComponent implements OnInit
     }
     else if ( contrasenya === this.contrasenya2 && contrasenya !== "" )
     {
-      let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya, rol: false };
+      let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya, rol: false, id: this.usuario.length + 1, amigos: [] };
 
       this.usuario.push( nuevoUsuario );
 
