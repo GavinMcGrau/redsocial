@@ -8,10 +8,11 @@
 }
 
 .descripcionAmigos {
-  width: 14vw;
-  position: absolute;
-  top: 18vh;
-  left: -4vw;
+  top: 100%;
+  position: relative;
+  left: -7vw;
+  width: 18vw;
+  font-weight: 600;
 }
 
 .mongo {
@@ -44,6 +45,9 @@
 }
 
 .friendZone {
+  align-items: center;
+  align-content: center;
+  text-align: center;
   border: 4px solid #2c92cb;
   width: 20vw;
   height: 30vh;
@@ -67,11 +71,10 @@
 }
 
 .nombreAmigos {
-  top: 130%;
+  top: 96%;
   position: relative;
-  left: 50%;
-  margin-left: -6vw;
-  width: 16vw;
+  margin-left: -6.5vw;
+  width: 18vw;
   font-weight: 600;
 }
 
