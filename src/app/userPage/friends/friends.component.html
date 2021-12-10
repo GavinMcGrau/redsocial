@@ -10,6 +10,7 @@
 
         <div class="imagenPerfil" style="background-image: url('{{item.foto}}');">
             <h2 class="nombreAmigos">{{item.nombre}} {{item.apellidos}} </h2>
+            <h6 class="descripcionAmigos">{{item.descripcion}}</h6>
             <div class="dropAmigo" (click)="dropAmigo(item.id)"></div>
             <div class="sendAmigo" (click)="sendAmigo()"></div>
         </div>

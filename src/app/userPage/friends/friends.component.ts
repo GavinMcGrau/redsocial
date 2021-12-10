@@ -72,9 +72,7 @@ export class FriendsComponent implements OnInit
           if(this.currentUser.amigos[a]==id){
             this.currentUser.amigos.splice( a, 1 );
           }
-        }
-       
-        
+        }       
       }
       
     }
