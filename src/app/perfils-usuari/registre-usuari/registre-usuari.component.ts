@@ -131,8 +131,7 @@ export class RegistreUsuariComponent implements OnInit
     } )
   }
 
-  clearForm ()
-  {
+  clearForm () {
     ( <HTMLFormElement> document.getElementById( "formRegistre" ) ).reset();
   }
 
