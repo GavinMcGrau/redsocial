@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/usuarios.service';
 import { CurrentUserService } from 'src/app/current-user.service';
 import { Usuario } from 'src/app/perfils-usuari/interfaces/interfaces';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import Swal from 'sweetalert2';
 
 
 @Component( {
@@ -69,6 +71,24 @@ export class FriendsComponent implements OnInit
 
     }
 
+  }
+
+  pola ()
+  {
+    Swal.fire( {
+      title: 'Proximamente!',
+      text: 'Funcion no disponible!',
+      icon: 'error',
+      confirmButtonText: 'Volver'
+    } )
+
+
+  }
+
+
+  sendAmigo ()
+  {
+    this.pola();
   }
 
 
