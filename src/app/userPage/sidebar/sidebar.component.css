@@ -1,19 +1,18 @@
 .header {
-    width: 35em;
-    height: 25em;
-    left: 50%;
-    margin-left: -17.5em;
-    border-radius: 30%;
-    margin-top: -10em;
-    background-color: rgba(0, 167, 167, 0.637);
-    position: relative;
-    z-index: 5;
-    box-shadow: 0em 0em 3px 2px rgb(0, 255, 255);
-    /*  animation-name: flash;
+  width: 35em;
+  height: 25em;
+  left: 50%;
+  margin-left: -17.5em;
+  border-radius: 30%;
+  margin-top: -10em;
+  background-color: rgba(0, 167, 167, 0.637);
+  position: relative;
+  z-index: 5;
+  box-shadow: 0em 0em 3px 2px rgb(0, 255, 255);
+  /*  animation-name: flash;
         animation-duration: 1.5s;
         animation-iteration-count: infinite; */
 }
-
 
 /*    @keyframes flash {
         0% {
@@ -28,95 +27,95 @@
     } */
 
 .profileImage {
-    width: 10vw;
-    height: 10vw;
-    position: absolute;
-    left: 50%;
-    margin-left: -4.5vw;
-    top: 3vh;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -4.5vw;
+  top: 3vh;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .barraLateral {
-    height: 105vh;
-    width: 12vw;
-    position: absolute;
-    left: -1%;
-    top: -1%;
-    background-color: rgba(11, 133, 155, 0.603);
+  height: 105vh;
+  width: 12vw;
+  position: absolute;
+  left: -1%;
+  top: -1%;
+  background-color: rgba(11, 133, 155, 0.603);
 }
 
 .botonLateral {
-    display: flex;
-    justify-content: center;
-    border-radius: 2%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*   height: 5em;
+  display: flex;
+  justify-content: center;
+  border-radius: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*   height: 5em;
         width: 5em; */
-    height: 50vh;
-    width: 20vh;
-    top: 30%;
-    margin-top: -2.5em;
-    transition-duration: 1.5s;
-    left: 0.7vw;
-    position: absolute;
+  height: 50vh;
+  width: 20vh;
+  top: 30%;
+  margin-top: -2.5em;
+  transition-duration: 1.5s;
+  left: 0.7vw;
+  position: absolute;
 }
 
 .boton {
-    align-items: baseline;
-    display: flex;
-    justify-content: center;
-    opacity: 1;
-    position: absolute;
-    background-color: rgba(86, 114, 114, 0.596);
-    text-align: center;
-    align-items: center;
-    width: 7em;
-    height: 7em;
-    border-radius: 50%;
+  align-items: baseline;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  position: absolute;
+  background-color: rgba(86, 114, 114, 0.596);
+  text-align: center;
+  align-items: center;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
 }
 
 .boton:hover {
-    box-shadow: 0em 0em 3px 2px rgb(19 139 155);
+  box-shadow: 0em 0em 3px 2px rgb(19 139 155);
 }
 
 .amigos {
-    top: 25%;
-    background-image: url("https://i.ibb.co/KKQ3YL0/240-F-215153303-LBu-BWRey-RO6w9-ULpyx1-IXq-Gi8f-RJvju7.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  top: 20%;
+  background-image: url("https://i.ibb.co/KKQ3YL0/240-F-215153303-LBu-BWRey-RO6w9-ULpyx1-IXq-Gi8f-RJvju7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .personas {
-    top: 50%;
-    background-image: url("https://i.ibb.co/4YKKYfR/240-F-276906247-nv-Wi-UFj-Jwvi-TQZh-Qao-J80-Vwra-Tcc4-Dki.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  top: 55%;
+  background-image: url("https://i.ibb.co/4YKKYfR/240-F-276906247-nv-Wi-UFj-Jwvi-TQZh-Qao-J80-Vwra-Tcc4-Dki.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .ajustes {
-    top: 75%;
-    background-image: url("https://i.ibb.co/D8SCyNN/240-F-180522766-My-EP9s8m-KJOi35el-VWDI64g0i-Sd-SZfym.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+  top: 90%;
+  background-image: url("https://i.ibb.co/D8SCyNN/240-F-180522766-My-EP9s8m-KJOi35el-VWDI64g0i-Sd-SZfym.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .barra {
-    width: 14em;
-    height: 100%;
-    position: absolute;
-    background-color: blueviolet;
+  width: 14em;
+  height: 100%;
+  position: absolute;
+  background-color: blueviolet;
 }
 
 .leftBody {
-    top: 0%;
-    left: 10%;
+  top: 0%;
+  left: 10%;
 }
 
 .dretaBody {
-    left: 80%;
-    top: 0%;
+  left: 80%;
+  top: 0%;
 }
