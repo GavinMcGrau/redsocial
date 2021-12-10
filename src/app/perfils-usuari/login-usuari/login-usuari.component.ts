@@ -4,6 +4,7 @@ import { Usuario } from '../interfaces/interfaces';
 import { PerfilsUsuariComponent } from '../perfils-usuari.component';
 import { UsuariosService } from 'src/app/usuarios.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { CurrentUserService } from 'src/app/current-user.service';
 
 
 @Component( {
@@ -13,7 +14,6 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 } )
 export class LoginUsuariComponent
 {
-
   usuario: Usuario[] = [];
   nombre: string = "";
   apellido: string = "";
@@ -29,7 +29,7 @@ export class LoginUsuariComponent
 
 
 
-  constructor ( private router: Router, private route: ActivatedRoute, private UsuariosService: UsuariosService )
+  constructor ( private CurrentUserService: CurrentUserService, private router: Router, private route: ActivatedRoute, private UsuariosService: UsuariosService )
   {
     let usuario: Usuario[] = [];
 
@@ -68,13 +68,17 @@ export class LoginUsuariComponent
       {
 
         this.next = true;
+        this.CurrentUserService.setCurrent( this.usuario[ i ] );
         this.router.navigate( [ "/userPage" ], { relativeTo: this.route } );
+
+
       }
 
 
     }
 
-    if(this.next==false){
+    if ( this.next == false )
+    {
       this.pola();
     }
 

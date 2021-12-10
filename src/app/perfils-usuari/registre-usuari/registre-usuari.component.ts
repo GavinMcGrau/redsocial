@@ -54,13 +54,15 @@ export class RegistreUsuariComponent implements OnInit
   ngOnInit (): void
   {
     this.usuario = this.UsuariosService.getUsuarios();
+
   }
 
 
 
   creacionUsuario ( nombre: string, apellidos: string, edad: number, foto: string, correo: string, descripcion: string, contrasenya: string )
   {
-    if( (!correo.includes(".")) || (!correo.includes("@")) || correo=="" ){
+    if ( ( !correo.includes( "." ) ) || ( !correo.includes( "@" ) ) || correo == "" )
+    {
 
       Swal.fire( {
         title: 'Correo incorrecto',
@@ -68,17 +70,19 @@ export class RegistreUsuariComponent implements OnInit
         icon: 'error',
         confirmButtonText: 'volver'
       } )
-      
 
-    }else if(nombre==""){
+
+    } else if ( nombre == "" )
+    {
       Swal.fire( {
         title: 'Nombre incorrecto',
         text: 'Introduce un nombre valido',
         icon: 'error',
         confirmButtonText: 'volver'
       } )
-      
-    }else if(apellidos==""){
+
+    } else if ( apellidos == "" )
+    {
       Swal.fire( {
         title: 'Apellidos incorrecto',
         text: 'Introduce un apellido valido',
@@ -86,7 +90,8 @@ export class RegistreUsuariComponent implements OnInit
         confirmButtonText: 'volver'
       } )
     }
-    else if(descripcion=="" || descripcion.length<4){
+    else if ( descripcion == "" || descripcion.length < 4 )
+    {
       Swal.fire( {
         title: 'Nombre incorrecto',
         text: 'Introduce un nombre valido',
@@ -96,7 +101,7 @@ export class RegistreUsuariComponent implements OnInit
     }
     else if ( contrasenya === this.contrasenya2 && contrasenya !== "" )
     {
-      let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya };
+      let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya, rol: false };
 
       this.usuario.push( nuevoUsuario );
 

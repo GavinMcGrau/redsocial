@@ -1,13 +1,4 @@
-<div class="barraLateral">
+<h1>{{currentUser.nombre}}</h1>
+<h1>{{edad}}</h1>
 
-<div class="botonLateral" id="botonLateral">
-
-    <div class="amigos boton" id="amigos">Amigos</div>
-    <div class="personas boton" id="personas">Personas</div>
-    <div class="ajustes boton">Ajustes</div>
-   
-
-</div>
-</div>
-
-
+<app-sidebar *ngIf="rol"></app-sidebar>

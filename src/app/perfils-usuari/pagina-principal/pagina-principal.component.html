@@ -1,46 +1,45 @@
 <body>
-    
 
-<div class="derechaFormulario" id="derechaFromulario"></div>
-<div class="background"></div>
-<div class="imagenPrincipal" id="imagenPrincipal">
-    <h1 class="titulo">BreakEnds</h1>
-</div>
 
-<div>
-    <li *ngFor="let item of usuario">
-        <a>{{ item.nombre }}</a>
-    </li>
-</div>
+    <div class="derechaFormulario" id="derechaFromulario"></div>
+    <div class="background"></div>
+    <div class="imagenPrincipal" id="imagenPrincipal">
+        <h1 class="titulo">BreakEnds</h1>
+    </div>
 
-<div class="contenedorSing" id="contenedorSing">
-    <!--  <app-registre-usuari class="registreComponent" [style.display]="verNoverRegistro"></app-registre-usuari>
+
+
+    <div class="contenedorSing" id="contenedorSing">
+        <!--  <app-registre-usuari class="registreComponent" [style.display]="verNoverRegistro"></app-registre-usuari>
     <app-login-usuari class="loginComponent" [style.display]="verNoverLogin"></app-login-usuari> -->
-    <app-perfils-usuari [showHidde]="showHidde"></app-perfils-usuari>
-    <!-- <div class="loginBoton" id="login" (click)="showHiddeF('login')"></div>
+        <app-perfils-usuari [showHidde]="showHidde"></app-perfils-usuari>
+        <!-- <div class="loginBoton" id="login" (click)="showHiddeF('login')"></div>
     <div class="singupBoton" id="singup" (click)="showHiddeF('singup')"></div> -->
 
-    <a class="boton botonLogin" routerLink="/login"><span></span>
-    <span></span>
-    <span></span>
-    <span></span> Entrar
-  </a>
 
-    <a class="boton botonRegistre" routerLink="/registre">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span> Registrarse
-    </a>
-    <a class boton>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
-</div>
 
-<div class="routeSing">
-    <router-outlet></router-outlet>
-</div>
+        <a class="boton botonRegistre" routerLink="/registre">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Registrarse
+        </a>
+        <a class="boton botonLogin" routerLink="/login">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Entrar
+        </a>
+        <a class boton>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+    </div>
+
+    <div class="routeSing">
+        <router-outlet></router-outlet>
+    </div>
 </body>
