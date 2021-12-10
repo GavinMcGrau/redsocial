@@ -1,8 +1,53 @@
 .mongo {
     position: absolute;
     overflow: auto;
-    height: 52vh;
-    width: 60vw;
-    left: 26%;
-    top: 32vh;
+    height: 66vh;
+    width: 79vw;
+    left: 16%;
+    top: 26vh;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 10px;
+}
+
+.friendZone {
+    border: 5px solid black;
+    width: 20vw;
+    height: 30vh;
+}
+
+.imagenPerfil {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    margin-left: -2.5vw;
+    position: relative;
+    top: 10%;
+}
+
+.nombreAmigos {
+    top: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -4vw;
+    width: 16vw;
+}
+
+.apellidosAmigos {
+    top: 150%;
+    position: relative;
+    left: -1vw;
+}
+
+.dropAmigo {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-image: url("https://i.ibb.co/m6v09C2/cancel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
 }

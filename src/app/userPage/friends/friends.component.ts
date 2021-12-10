@@ -3,6 +3,7 @@ import { UsuariosService } from 'src/app/usuarios.service';
 import { CurrentUserService } from 'src/app/current-user.service';
 import { Usuario } from 'src/app/perfils-usuari/interfaces/interfaces';
 
+
 @Component( {
   selector: 'app-friends',
   templateUrl: './friends.component.html',
@@ -41,6 +42,34 @@ export class FriendsComponent implements OnInit
     this.id = this.currentUser.id;
     this.amigos = this.currentUser.amigos;
 
+
+    for ( let i = 0; i < this.usuarios.length; i++ )
+    {
+      for ( let a = 0; a < this.currentUser.amigos.length; a++ )
+      {
+        if ( this.usuarios[ i ].id == this.currentUser.amigos[ a ] )
+        {
+          this.currentUserFriends.push( this.usuarios[ i ] );
+        }
+      }
+    }
+
+
+
   }
+
+  dropAmigo ( id: number )
+  {
+    for ( let i = 0; i < this.currentUserFriends.length; i++ )
+    {
+      if ( this.currentUserFriends[ i ].id == id )
+      {
+        this.currentUserFriends.splice( i, 1 )
+      }
+
+    }
+
+  }
+
 
 }
