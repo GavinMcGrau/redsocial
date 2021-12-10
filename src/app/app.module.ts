@@ -20,12 +20,14 @@ import { PersonasComponent } from './user-options/personas/personas.component';
 import { SidebarComponent } from './userPage/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FriendsComponent } from './userPage/friends/friends.component';
+import { MasAmigosComponent } from './userPage/mas-amigos/mas-amigos.component';
+import { ConfigUsuarioComponent } from './userPage/config-usuario/config-usuario.component';
 
 @NgModule( {
   declarations: [
 
 
-    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent, RoutingPageComponent, UserOptionsComponent,  AjustesComponent, PersonasComponent, SidebarComponent, FriendsComponent
+    RegistreUsuariComponent, PerfilsUsuariComponent, PaginaUsuariComponent, LoginUsuariComponent, PaginaPrincipalComponent, UserPageComponent, RoutingPageComponent, UserOptionsComponent,  AjustesComponent, PersonasComponent, SidebarComponent, FriendsComponent, MasAmigosComponent, ConfigUsuarioComponent
 
 
   ],

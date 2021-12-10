@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CurrentUserService } from '../../current-user.service';
 import { Usuario } from 'src/app/perfils-usuari/interfaces/interfaces';
 import { UsuariosService } from 'src/app/usuarios.service';
+import { RouterModule, Routes } from '@angular/router';
 
 
 @Component( {

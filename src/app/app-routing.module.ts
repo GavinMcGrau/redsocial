@@ -6,6 +6,9 @@ import { RegistreUsuariComponent } from './perfils-usuari/registre-usuari/regist
 import { Usuario } from './perfils-usuari/interfaces/interfaces';
 import { UserPageComponent } from './userPage/user-page/user-page.component';
 import { PaginaPrincipalComponent } from './perfils-usuari/pagina-principal/pagina-principal.component';
+import { AmigosComponent } from './user-options/amigos/amigos.component';
+import { MasAmigosComponent } from './userPage/mas-amigos/mas-amigos.component';
+import { ConfigUsuarioComponent } from './userPage/config-usuario/config-usuario.component';
 
 const routes: Routes = [
 
@@ -25,6 +28,18 @@ const routes: Routes = [
   {
     path: 'userPage',
     component: UserPageComponent
+  },
+  {
+    path: 'amigos',
+    component: AmigosComponent
+  },
+  {
+    path: 'masAmigos',
+    component: MasAmigosComponent
+  },
+  {
+    path: 'configuracion',
+    component: ConfigUsuarioComponent
   }
 ];
 
