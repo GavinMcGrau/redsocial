@@ -64,11 +64,19 @@ export class FriendsComponent implements OnInit
   {
     for ( let i = 0; i < this.currentUserFriends.length; i++ )
     {
-      if ( this.currentUserFriends[ i ].id == id )
+      
+      if ( this.currentUserFriends[ i ].id === id )
       {
-        this.currentUserFriends.splice( i, 1 )
+        this.currentUserFriends.splice( i, 1 );
+        for(let a =0;a<this.currentUser.amigos.length;a++){
+          if(this.currentUser.amigos[a]==id){
+            this.currentUser.amigos.splice( a, 1 );
+          }
+        }
+       
+        
       }
-
+      
     }
 
   }
