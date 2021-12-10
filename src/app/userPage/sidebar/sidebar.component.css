@@ -25,6 +25,18 @@
         }
     } */
     
+    .profileImage {
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        left: 50%;
+        margin-left: -4.5vw;
+        top: 3vh;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
     .barraLateral {
         height: 105vh;
         width: 12vw;
@@ -35,28 +47,24 @@
     }
     
     .botonLateral {
-        position: static;
-        /* border-radius: 50%; */
+        display: flex;
+        justify-content: center;
         border-radius: 2%;
-        /*      background-image: url("src/images/icons8-menú-512.png"); */
         background-size: cover;
         background-repeat: no-repeat;
         /*   height: 5em;
         width: 5em; */
         height: 50vh;
-        margin-top: -15em;
         width: 20vh;
-        top: 50%;
+        top: 30%;
         margin-top: -2.5em;
-        position: absolute;
-        box-shadow: 0em 0em 3px 2px rgb(64, 65, 52);
         transition-duration: 1.5s;
-        left: 15%;
+        left: 0.7vw;
         position: absolute;
     }
     
     .boton {
-        align-items: center;
+        align-items: baseline;
         display: flex;
         justify-content: center;
         opacity: 1;
@@ -64,34 +72,34 @@
         background-color: rgba(86, 114, 114, 0.596);
         text-align: center;
         align-items: center;
-        width: 90%;
-        height: 2em;
-        box-shadow: 0em 0em 3px 2px rgb(19, 139, 155);
+        width: 7em;
+        height: 7em;
+        border-radius: 50%;
+    }
+    
+    .boton:hover {
+        box-shadow: 0em 0em 3px 2px rgb(19 139 155);
     }
     
     .amigos {
-        top: 20%;
+        top: 25%;
+        background-image: url("https://i.ibb.co/KKQ3YL0/240-F-215153303-LBu-BWRey-RO6w9-ULpyx1-IXq-Gi8f-RJvju7.png");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     
     .personas {
-        top: 35%;
+        top: 50%;
+        background-image: url("https://i.ibb.co/4YKKYfR/240-F-276906247-nv-Wi-UFj-Jwvi-TQZh-Qao-J80-Vwra-Tcc4-Dki.png");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     
     .ajustes {
-        top: 50%;
-    }
-    
-    .botonLateral:hover {
-        height: 50vh;
-        margin-top: -15em;
-        width: 20vh;
-        border-radius: 2%;
-        box-shadow: none;
-        background-image: none;
-    }
-    
-    .botonLateral:hover>.boton {
-        opacity: 1;
+        top: 75%;
+        background-image: url("https://i.ibb.co/D8SCyNN/240-F-180522766-My-EP9s8m-KJOi35el-VWDI64g0i-Sd-SZfym.png");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     
     .barra {
