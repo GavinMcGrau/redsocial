@@ -10,11 +10,12 @@ import { AmigosComponent } from './user-options/amigos/amigos.component';
 import { MasAmigosComponent } from './userPage/mas-amigos/mas-amigos.component';
 import { ConfigUsuarioComponent } from './userPage/config-usuario/config-usuario.component';
 import { FriendsComponent } from './userPage/friends/friends.component';
+import { PaginaAdminComponent } from './adminPage/pagina-admin/pagina-admin.component';
 
 const routes: Routes = [
 
   {
-    path: '#',
+    path: '',
     component: PaginaPrincipalComponent
   },
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'configuracion',
     component: ConfigUsuarioComponent
+  },
+  {
+    path: 'administracion',
+    component: PaginaAdminComponent
   }
 ];
 

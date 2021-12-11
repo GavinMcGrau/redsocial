@@ -93,15 +93,17 @@ export class RegistreUsuariComponent implements OnInit
     else if ( descripcion == "" || descripcion.length < 4 )
     {
       Swal.fire( {
-        title: 'Nombre incorrecto',
-        text: 'Introduce un nombre valido',
+        title: 'Descripcion corta',
+        text: 'Introduce una mas completa',
         icon: 'error',
         confirmButtonText: 'volver'
       } )
     }
     else if ( contrasenya === this.contrasenya2 && contrasenya !== "" )
     {
-      let nuevoUsuario: Usuario = { nombre, apellidos, edad, foto, correo, descripcion, contrasenya, rol: false, id: this.usuario.length + 1, amigos: [] };
+      let nuevoUsuario: Usuario = {
+        nombre, apellidos, edad, foto: " https://cdn.pixabay.com/photo/2013/10/09/02/26/cattle-192976_1280.jpg", correo, descripcion, contrasenya, rol: false, id: this.usuario.length + 1, amigos: []
+      };
 
       this.usuario.push( nuevoUsuario );
 
@@ -131,7 +133,8 @@ export class RegistreUsuariComponent implements OnInit
     } )
   }
 
-  clearForm () {
+  clearForm ()
+  {
     ( <HTMLFormElement> document.getElementById( "formRegistre" ) ).reset();
   }
 

@@ -69,8 +69,13 @@ export class LoginUsuariComponent
 
         this.next = true;
         this.CurrentUserService.setCurrent( this.usuario[ i ] );
-        this.router.navigate( [ "/userPage" ], { relativeTo: this.route } );
-
+        if ( this.usuario[ i ].rol == false )
+        {
+          this.router.navigate( [ "/userPage" ], { relativeTo: this.route } );
+        } else
+        {
+          this.router.navigate( [ "/administracion" ], { relativeTo: this.route } );
+        }
 
       }
 

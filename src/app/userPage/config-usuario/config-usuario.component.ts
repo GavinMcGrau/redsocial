@@ -22,6 +22,7 @@ export class ConfigUsuarioComponent implements OnInit
   foto: string = "";
   descripcion: string = "";
   contrasenya: string = "";
+  id: number = 0;
 
   constructor ( private CurrentUserService: CurrentUserService, private UsuariosService: UsuariosService ) { }
 
@@ -36,6 +37,7 @@ export class ConfigUsuarioComponent implements OnInit
     this.foto = this.currentUser.foto;
     this.correo = this.currentUser.correo;
     this.descripcion = this.currentUser.descripcion
+    this.id = this.currentUser.id;
 
   }
 
@@ -81,25 +83,33 @@ export class ConfigUsuarioComponent implements OnInit
     } else
     {
 
-      for ( let i = 0; i < this.usuarios.length; i++ )
-      {
-        if ( this.usuarios[ i ].id = this.currentUser.id )
-        {
-          this.usuarios[ i ].apellidos = apellidos;
-          this.usuarios[ i ].contrasenya = contrasenya;
-          this.usuarios[ i ].nombre = nombre;
-          this.usuarios[ i ].correo = correo;
-          this.usuarios[ i ].descripcion = descripcion;
-          this.usuarios[ i ].edad = edad;
-          this.usuarios[ i ].foto = foto;
+      this.currentUser.apellidos = apellidos;
+      this.currentUser.contrasenya = contrasenya;
+      this.currentUser.nombre = nombre;
+      this.currentUser.correo = correo;
+      this.currentUser.descripcion = descripcion;
+      this.currentUser.edad = edad;
+      this.currentUser.foto = foto;
+      /*
+            for ( let i = 0; i < this.usuarios.length; i++ )
+            {
+               if ( this.usuarios[ i ].id = this.id )
+              {
+                this.usuarios[ i ].apellidos = apellidos;
+                this.usuarios[ i ].contrasenya = contrasenya;
+                this.usuarios[ i ].nombre = nombre;
+                this.usuarios[ i ].correo = correo;
+                this.usuarios[ i ].descripcion = descripcion;
+                this.usuarios[ i ].edad = edad;
+                this.usuarios[ i ].foto = foto;
+      
+      
+              } */
 
-
-        }
-
-      }
     }
   }
-
-
-
 }
+
+
+
+
