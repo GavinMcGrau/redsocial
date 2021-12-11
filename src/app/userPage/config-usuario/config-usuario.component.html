@@ -1,6 +1,6 @@
 <app-sidebar></app-sidebar>
 <div class="login-box">
-  <!-- <table>
+    <!-- <table>
         <tr *ngFor="let item of usuario">
             <td>
                 {{ item.nombre }}
@@ -8,13 +8,12 @@
         </tr>
     </table> -->
 
-  <!--   (ngSubmit)="creacionUsuario()" novalidate
+    <!--   (ngSubmit)="creacionUsuario()" novalidate
  -->
 
-  <h2>Cambiar Datos</h2>
-  <div class="formContainer">
-    <form
-      (ngSubmit)="
+    <h2>Cambiar Datos</h2>
+    <div class="formContainer">
+        <form (ngSubmit)="
         updateChanges(
           nombre,
           apellidos,
@@ -24,58 +23,38 @@
           descripcion,
           contrasenya
         )
-      "
-    >
-      <div class="user-box">
-        <input type="text" [(ngModel)]="nombre" name="nombre" required="" />
-        <label>Nombre</label>
-      </div>
-      <div class="user-box">
-        <input
-          type="text"
-          [(ngModel)]="apellidos"
-          name="apellidos"
-          required=""
-        />
-        <label>Apellidos</label>
-      </div>
-      <div class="user-box">
-        <input
-          type="password"
-          [(ngModel)]="contrasenya"
-          name="contrasenya"
-          required=""
-        />
-        <label>Contraseña</label>
-      </div>
+      ">
+            <div class="user-box">
+                <input type="text" [(ngModel)]="nombre" name="nombre" required="" />
+                <label>Nombre</label>
+            </div>
+            <div class="user-box">
+                <input type="text" [(ngModel)]="apellidos" name="apellidos" required="" />
+                <label>Apellidos</label>
+            </div>
+            <div class="user-box">
+                <input type="password" [(ngModel)]="contrasenya" name="contrasenya" required="" />
+                <label>Contraseña</label>
+            </div>
 
-      <div class="user-box">
-        <input
-          type="number"
-          [(ngModel)]="edad"
-          name="edad"
-          placeholder="2"
-          value="2"
-          required=""
-        />
-        <label>Edad</label>
-      </div>
-      <div class="user-box">
-        <input type="email" [(ngModel)]="correo" name="correos" required="" />
-        <label>Correo</label>
-      </div>
-      <div class="user-box big">
-        <input
-          type="text"
-          [(ngModel)]="descripcion"
-          name="descripcion"
-          required=""
-        />
-        <label>Descripcion</label>
-      </div>
-      <input type="submit" style="display: none" />
-      <a
-        (click)="
+            <div class="user-box">
+                <input type="number" [(ngModel)]="edad" name="edad" placeholder="2" value="2" required="" />
+                <label>Edad</label>
+            </div>
+            <div class="user-box">
+                <input type="email" [(ngModel)]="correo" name="correos" required="" />
+                <label>Correo</label>
+            </div>
+            <div class="user-box big">
+                <input type="text" [(ngModel)]="descripcion" name="descripcion" required="" />
+                <div class="user-box">
+                    <input type="url" [(ngModel)]="foto" name="foto" required="" />
+                    <label>Contraseña</label>
+                </div>
+                <label>Descripcion</label>
+            </div>
+            <input type="submit" style="display: none" />
+            <a (click)="
           updateChanges(
             nombre,
             apellidos,
@@ -85,13 +64,12 @@
             descripcion,
             contrasenya
           )
-        "
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span> Enviar
-      </a>
-    </form>
-  </div>
+        ">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Enviar
+            </a>
+        </form>
+    </div>
 </div>
