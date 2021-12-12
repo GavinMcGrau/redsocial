@@ -13,11 +13,10 @@ body {
     background: rgba(0, 204, 255, 0.719);
     color: #334e50;
 }
-
-.loginLink {
+.loginLink{
     color: white;
+   
 }
-
 .error {
     height: 3em;
     width: 15em;
@@ -39,13 +38,13 @@ body {
     display: none;
 }
 
-.contrasenya {}
+
 
 .login-box {
     position: absolute;
     top: 50%;
     left: 75%;
-    width: 20vw;
+    width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(11, 92, 129, 0.966);
@@ -65,11 +64,11 @@ body {
 
 .login-box .user-box {
     position: relative;
-    height: -4vh;
 }
 
 .login-box .user-box input {
     width: 100%;
+    padding: 10px 0;
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;

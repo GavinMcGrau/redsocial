@@ -31,28 +31,28 @@
                             <label>Nombre</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" [(ngModel)]="apellido" name="apellidos" required="" />
+                            <input type="text" [(ngModel)]="item.apellidos" name="apellidos" required="" />
                             <label>Apellidos</label>
                         </div>
                         <div class="user-box">
-                            <input type="password" [(ngModel)]="contrasenya" name="contrasenya" required="" />
+                            <input type="password" [(ngModel)]="item.contrasenya" name="contrasenya" required="" />
                             <label>Contraseña</label>
                         </div>
 
                         <div class="user-box">
-                            <input type="number" [(ngModel)]="edad" name="edad" placeholder="2" value="2" required="" />
+                            <input type="number" [(ngModel)]="item.edad" name="edad" placeholder="2" value="2" required="" />
                             <label>Edad</label>
                         </div>
                         <div class="user-box">
-                            <input type="email" [(ngModel)]="correo" name="correos" required="" />
+                            <input type="email" [(ngModel)]="item.correo" name="correos" required="" />
                             <label>Correo</label>
                         </div>
                         <div class="user-box big">
-                            <input type="text" [(ngModel)]="descripcion" name="descripcion" required="" />
+                            <input type="text" [(ngModel)]="item.descripcion" name="descripcion" required="" />
                             <label>Descripcion</label>
                         </div>
                         <div class="user-box big">
-                            <input type="url" [(ngModel)]="foto" name="foto" required="" />
+                            <input type="url" [(ngModel)]="item.foto" name="foto" required="" />
                             <label>Foto</label>
                         </div>
                         <input type="submit" style="display: none" />
