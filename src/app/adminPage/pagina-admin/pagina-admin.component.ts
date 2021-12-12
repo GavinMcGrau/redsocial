@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CurrentUserService } from 'src/app/current-user.service';
 import { UsuariosService } from 'src/app/usuarios.service';
 import { Usuario } from 'src/app/perfils-usuari/interfaces/interfaces';
+import Swal from 'sweetalert2';
+
 
 @Component( {
   selector: 'app-pagina-admin',
@@ -10,6 +12,9 @@ import { Usuario } from 'src/app/perfils-usuari/interfaces/interfaces';
 } )
 export class PaginaAdminComponent implements OnInit
 {
+
+
+  
 
   usuarios: Usuario[] = [];
   currentUserFriends: Usuario[] = [];
@@ -51,4 +56,41 @@ export class PaginaAdminComponent implements OnInit
 
   }
 
+  deleteUser(item:Usuario){
+    for(let i =0;i<this.usuarios.length;i++){
+      if(this.usuarios[i].id == item.id){
+        this.usuarios.splice(i,1);
+      }
+
+    }
+
+  }
+
+eliminarUsuario(item:Usuario){
+  Swal.fire({
+    title: '¿Estas seguro de que quieres eliminarlo?',
+    text: "No se podra deshacer!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si,eliminar!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Eliminado!',
+        'El usuario ha sido eliminado.',
+        'success'
+      )
+      this.deleteUser(item);
+    }
+  })
 }
+
+  
+}
+
+
+
+
+
