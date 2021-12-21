@@ -47,7 +47,7 @@ export class MasAmigosComponent implements OnInit
     {
       for ( let a = 0; a < this.amigos.length; a++ )
       {
-        if ( this.usuarios[ i ].id == this.amigos[ a ] || this.usuarios[ i ] == this.currentUser )
+        if ( this.usuarios[ i ].id == this.amigos[ a ] || this.usuarios[ i ] == this.currentUser || this.usuarios[i].rol== true )
         {
           this.sinAmistad = true;
         }
